@@ -22,7 +22,7 @@ import { useConfig } from "@/hooks/use-config";
 import { useMediaQuery } from "@/hooks/use-media-query";
 import { useMobileMenuConfig } from "@/hooks/use-mobile-menu";
 import { useMenuHoverConfig } from "@/hooks/use-menu-hover";
-const MenuItem = ({
+const MenuItem = React.memo(({
   href,
   label,
   icon,
@@ -46,13 +46,17 @@ const MenuItem = ({
     id: id,
   });
 
-  const style: CSSProperties = {
+  const style: CSSProperties = React.useMemo(() => ({
     transform: CSS.Transform.toString(transform),
     transition: transition,
     opacity: isDragging ? 0.8 : 1,
     zIndex: isDragging ? 1 : 0,
     position: "relative",
-  };
+  }), [transform, transition, isDragging]);
+
+  const handleMobileMenuClose = React.useCallback(() => {
+    setMobileMenuConfig({ ...mobileMenuConfig, isOpen: false });
+  }, [mobileMenuConfig, setMobileMenuConfig]);
   if (config.sidebar === "draggable" && isDesktop) {
     return (
       <Button
@@ -126,9 +130,7 @@ const MenuItem = ({
   }
   return (
     <Button
-      onClick={() =>
-        setMobileMenuConfig({ ...mobileMenuConfig, isOpen: false })
-      }
+      onClick={handleMobileMenuClose}
       variant={active ? "default" : "ghost"}
       fullWidth
       color={active ? "default" : "secondary"}
@@ -154,6 +156,6 @@ const MenuItem = ({
       </Link>
     </Button>
   );
-};
+});
 
 export default MenuItem;
