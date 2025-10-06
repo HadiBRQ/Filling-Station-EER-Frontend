@@ -3,6 +3,8 @@ import LayoutContentProvider from "@/providers/content.provider";
 import DashBoardSidebar from "@/components/partials/sidebar";
 import DashBoardFooter from "@/components/partials/footer";
 import DashBoardHeader from "@/components/partials/header";
+import { Toaster } from "@/components/ui/sonner";
+
 const layout = async ({ children }: { children: React.ReactNode }) => {
   return (
     <LayoutProvider>
@@ -10,6 +12,7 @@ const layout = async ({ children }: { children: React.ReactNode }) => {
       <DashBoardSidebar />
       <LayoutContentProvider>{children}</LayoutContentProvider>
       <DashBoardFooter />
+      <Toaster />
     </LayoutProvider>
   );
 };
