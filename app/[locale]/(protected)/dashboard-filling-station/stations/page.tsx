@@ -161,12 +161,12 @@ export default function StationsPage() {
 
                   {/* Actions */}
                   <div className="flex gap-2 pt-2">
-                    <Link href={`/filling-station/stations/${station.station_id}`} className="flex-1">
+                    <Link href={`/dashboard-filling-station/stations/${station.station_id}`} className="flex-1">
                       <Button variant="outline" className="w-full">
                         View Details
                       </Button>
                     </Link>
-                    <Link href={`/filling-station/stations/${station.station_id}/branches`} className="flex-1">
+                    <Link href={`/dashboard-filling-station/stations/${station.station_id}/branches`} className="flex-1">
                       <Button className="w-full">
                         Manage Branches
                       </Button>
@@ -187,7 +187,7 @@ export default function StationsPage() {
             <p className="text-muted-foreground mb-4">
               MACROOIL operates as a single unified station with multiple branches. Create additional branches instead.
             </p>
-            <Link href="/filling-station/branches">
+            <Link href="/dashboard-filling-station/branches">
               <Button>
                 <Plus className="mr-2 h-4 w-4" />
                 Manage Branches

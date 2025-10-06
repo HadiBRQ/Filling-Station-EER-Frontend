@@ -3,8 +3,8 @@ import HeaderContent from './header-content'
 import HeaderSearch from './header-search'
 import ProfileInfo from './profile-info'
 import Notifications from './notifications'
-import Messages from "./messages"
-import { Cart } from './cart'
+// import Messages from "./messages"
+// import { Cart } from './cart'
 import ThemeSwitcher from './theme-switcher'
 import { SidebarToggle } from '@/components/partials/sidebar/sidebar-toggle'
 import { SheetMenu } from '@/components/partials/sidebar/menu/sheet-menu'
@@ -25,8 +25,8 @@ const DashBoardHeader = async () => {
                 <div className="nav-tools flex items-center  md:gap-4 gap-3">
                     <LocalSwitcher />
                     <ThemeSwitcher />
-                    <Cart />
-                    <Messages />
+                    {/* <Cart /> */}
+                    {/* <Messages /> */}
                     <Notifications />
                     <ProfileInfo />
                     <SheetMenu />
