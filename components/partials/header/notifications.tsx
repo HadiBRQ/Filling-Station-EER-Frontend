@@ -27,7 +27,7 @@ import {
 } from "lucide-react";
 import { getLowStockTanks } from "@/lib/filling-station-data";
 
-interface MacrooilNotification {
+interface EnergyNotification {
     id: string;
     type: 'info' | 'warning' | 'success' | 'error';
     title: string;
@@ -38,12 +38,12 @@ interface MacrooilNotification {
 }
 
 const Notifications = () => {
-    const [notifications, setNotifications] = useState<MacrooilNotification[]>([]);
+    const [notifications, setNotifications] = useState<EnergyNotification[]>([]);
 
     useEffect(() => {
         // Initialize with system notifications
         const lowStockTanks = getLowStockTanks();
-        const systemNotifications: MacrooilNotification[] = [];
+        const systemNotifications: EnergyNotification[] = [];
 
         if (lowStockTanks.length > 0) {
             systemNotifications.push({
@@ -136,7 +136,7 @@ const Notifications = () => {
         ));
     };
 
-    const getNotificationIcon = (icon: MacrooilNotification['icon'], type: MacrooilNotification['type']) => {
+    const getNotificationIcon = (icon: EnergyNotification['icon'], type: EnergyNotification['type']) => {
         const baseClasses = "h-4 w-4";
         
         switch (icon) {

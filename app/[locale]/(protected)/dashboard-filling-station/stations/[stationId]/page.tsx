@@ -322,12 +322,12 @@ export default function StationDetailPage() {
 
                 {/* Action Buttons */}
                 <div className="flex gap-2 pt-2">
-                  <Link href={`/filling-station/branches/${branch.branch_id}`} className="flex-1">
+                  <Link href={`/dashboard-filling-station/branches/${branch.branch_id}`} className="flex-1">
                     <Button variant="outline" className="w-full">
                       View Branch Details
                     </Button>
                   </Link>
-                  <Link href={`/filling-station/branches/${branch.branch_id}/inventory`} className="flex-1">
+                  <Link href={`/dashboard-filling-station/branches/${branch.branch_id}/inventory`} className="flex-1">
                     <Button className="w-full">
                       Manage Inventory
                     </Button>

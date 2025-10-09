@@ -31,7 +31,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { toast } from "sonner";
 
-export default function MacrooilDashboard() {
+export default function EnergyDashboard() {
   const [companyData, setCompanyData] = useState(getMainCompanyData());
   const totalTanks = getTotalTanks();
   const totalBranches = getTotalBranches();
@@ -329,7 +329,7 @@ export default function MacrooilDashboard() {
         <CardHeader>
           <div className="flex items-center justify-between">
             <CardTitle>Branch Network</CardTitle>
-            <Link href="/filling-station/branches">
+            <Link href="/dashboard-filling-station/branches">
               <Button variant="outline" size="sm">
                 View All Branches
               </Button>
@@ -368,7 +368,7 @@ export default function MacrooilDashboard() {
                       </div>
                     )}
                     
-                    <Link href={`/filling-station/branches/${branch.branch_id}`}>
+                    <Link href={`/dashboard-filling-station/branches/${branch.branch_id}`}>
                       <Button variant="outline" size="sm" className="w-full">
                         <TrendingUp className="mr-2 h-3 w-3" />
                         View Details

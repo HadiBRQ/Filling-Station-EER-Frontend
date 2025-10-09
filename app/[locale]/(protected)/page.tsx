@@ -1,7 +1,6 @@
-import React from "react";
+import { redirect } from "next/navigation";
 
-const page = () => {
-  return <h1 className=" text-2xl"> Your Content goes here... </h1>;
-};
+export default function ProtectedRootPage() {
+  redirect("/dashboard-filling-station");
+}
 
-export default page;
