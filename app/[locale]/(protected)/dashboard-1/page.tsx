@@ -19,7 +19,7 @@ import {
 } from "lucide-react";
 import { mockDashboardStats, mockFillingStation, mockBranches } from "@/lib/data/mock-eer-data";
 
-const page = () => {
+export default function DashboardPage() {
   const stats = React.useMemo(() => mockDashboardStats, []);
   const station = React.useMemo(() => mockFillingStation, []);
   const branches = React.useMemo(() => mockBranches, []);
@@ -286,6 +286,4 @@ const page = () => {
       </Card>
     </div>
   );
-};
-
-export default page;
+}
