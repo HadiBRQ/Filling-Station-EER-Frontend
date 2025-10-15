@@ -13,7 +13,7 @@ export default function StaffNotFound() {
           </div>
           <CardTitle className="text-2xl">Staff Member Not Found</CardTitle>
           <CardDescription>
-            The staff member you're looking for doesn't exist or may have been removed.
+            The staff member you&apos;re looking for doesn&apos;t exist or may have been removed.
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
