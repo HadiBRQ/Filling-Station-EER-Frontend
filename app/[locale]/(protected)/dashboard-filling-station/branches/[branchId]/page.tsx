@@ -91,7 +91,7 @@ export default function BranchDetailPage() {
             <AlertCircle className="h-12 w-12 mx-auto mb-4 text-destructive" />
             <h3 className="text-lg font-medium mb-2">Branch Not Found</h3>
             <p className="text-muted-foreground mb-4">
-              The branch with ID "{branchId}" could not be found.
+              The branch with ID &quot;{branchId}&quot; could not be found.
             </p>
             <Link href="/dashboard-filling-station/branches">
               <Button>View All Branches</Button>

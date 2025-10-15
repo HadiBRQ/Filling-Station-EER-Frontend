@@ -22,6 +22,7 @@ import { useConfig } from "@/hooks/use-config";
 import { useMediaQuery } from "@/hooks/use-media-query";
 import { useMobileMenuConfig } from "@/hooks/use-mobile-menu";
 import { useMenuHoverConfig } from "@/hooks/use-menu-hover";
+
 const MenuItem = React.memo(({
   href,
   label,
@@ -157,5 +158,7 @@ const MenuItem = React.memo(({
     </Button>
   );
 });
+
+MenuItem.displayName = "MenuItem";
 
 export default MenuItem;
