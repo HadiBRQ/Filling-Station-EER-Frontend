@@ -15,7 +15,7 @@ import AuthProvider from "@/providers/auth.provider";
 
 export const metadata: Metadata = {
   title: "Dashboard admin Template",
-  description: "created by Hadi Ibrahim",
+  description: "created by Olanrewaju & Hadi Ibrahim",
 };
 
 export default async function RootLayout({
